@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+</head>
+
+<body>
+    <div id="jsContainer"></div>
+</body>
+
+</html>
+<script src="Scripts/JSONLoader.js" type="module"></script>
+<style>
+    /* Also created with chatGPT */
+
+    /* Main container styling */
+    .album-container {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 20px;
+        padding: 20px;
+        justify-content: center;
+    }
+
+    /* Card styling */
+    .album-card {
+        background-color: #f8f9fa;
+        border: 1px solid #ddd;
+        border-radius: 8px;
+        width: 200px;
+        padding: 15px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        position: relative;
+        overflow: hidden;
+        transition: transform 0.3s;
+        /* Smooth transition for lifting on hover */
+    }
+
+    .album-card:hover {
+        transform: translateY(-5px);
+    }
+
+    /* Basic text styling */
+    .album-card h2 {
+        font-size: 1.2em;
+        margin: 0 0 10px;
+        color: #333;
+    }
+
+    .album-card p {
+        margin: 0 0 10px;
+        color: #666;
+    }
+
+    .album-card a {
+        color: #007bff;
+        text-decoration: none;
+    }
+
+    .album-card a:hover {
+        text-decoration: underline;
+    }
+
+    /* Toggle button styling */
+    .toggle-button {
+        margin-top: 10px;
+        padding: 5px 10px;
+        font-size: 0.9em;
+        color: white;
+        background-color: #007bff;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+    }
+
+    .toggle-button:hover {
+        background-color: #0056b3;
+    }
+
+    /* Tracklist styling - hidden by default */
+    .tracklist {
+        list-style: decimal inside;
+        margin-top: 10px;
+        transition: max-height 0.3s ease;
+        /* Smooth expand/collapse */
+    }
+
+    .tracklist.hidden {
+        max-height: 0;
+        overflow: hidden;
+    }
+</style>
